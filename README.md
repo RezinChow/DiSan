@@ -2,6 +2,8 @@
 
 This repository contains the code needed to reproduce the main DiSan training, retrieval, and privacy-attack experiments. 
 
+Project page: https://rezinchow.github.io/DiSan/
+
 ## Directory Layout
 
 - `fed_lightweight/`: lightweight federated DiSan training code.
