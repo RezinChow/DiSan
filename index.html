@@ -216,6 +216,33 @@
       padding: 0 3px;
       border-radius: 4px;
     }
+    .io-title {
+      margin: 36px 0 18px;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+    .io-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    .io-card {
+      background: rgba(26, 35, 50, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .io-card h3 { font-size: 0.95rem; margin-bottom: 14px; }
+    .io-label {
+      display: inline-flex; align-items: center;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase; color: var(--accent);
+      margin: 10px 0 6px;
+    }
+    .io-label.output { color: var(--success); }
+    .io-text {
+      color: var(--text-muted); font-size: 0.82rem; line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+    .io-text strong { color: var(--text); font-weight: 600; }
 
     /* Method */
     .method-bg { background: var(--bg-elevated); }
@@ -296,7 +323,7 @@
       .hero { grid-template-columns: 1fr; padding-top: 120px; }
       .hero h1 { font-size: 2.2rem; }
       .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .problem-grid, .method-grid, .integration-grid, .example-grid { grid-template-columns: 1fr; }
+      .problem-grid, .method-grid, .integration-grid, .example-grid, .io-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
     @media (max-width: 640px) {
@@ -427,6 +454,31 @@ Financial transactions involve [NAME]'s account pin ([ACCOUNT_PIN]) and phone nu
         <h3>4. 下游 RAG 回答</h3>
         <p>跨 Agent 共享时，答案应该暴露可行动的控制措施，而不是暴露原始实体、内部模板或客户端写作习惯。</p>
         <code>The alliance should reduce cyber operational risk with MFA, patching, employee training, and disaster recovery; protect continuity with alternative suppliers and notification workflows; and keep response actions auditable through documented records.</code>
+      </div>
+    </div>
+
+    <h3 class="io-title">Input / Output 样例</h3>
+    <div class="io-grid">
+      <div class="io-card">
+        <h3>Operational Risk</h3>
+        <div class="io-label">Input</div>
+        <p class="io-text">A risk report mentions a single data center at <strong>73 rue David Menard</strong> and customer credentials tied to <strong>Vicenta D. Martin</strong>.</p>
+        <div class="io-label output">DiSan Output</div>
+        <p class="io-text">The report flags single-site continuity exposure and credential-driven fraud risk, recommending disaster recovery, redundant access paths, MFA, patching, and staff security training.</p>
+      </div>
+      <div class="io-card">
+        <h3>Supply Resilience</h3>
+        <div class="io-label">Input</div>
+        <p class="io-text">A supply agreement names <strong>Mark Nichols-Blackwell</strong> while requiring 99.5% availability, five-business-day lead time, two sources per critical component, and a written contingency plan.</p>
+        <div class="io-label output">DiSan Output</div>
+        <p class="io-text">The supplier record defines resilience controls: high availability, bounded lead time, diversified sourcing for critical components, and disruption notification and contingency procedures.</p>
+      </div>
+      <div class="io-card">
+        <h3>Dispute Resolution</h3>
+        <div class="io-label">Input</div>
+        <p class="io-text">A dispute policy includes an organization name, mailing address, and ombudsman email while describing complaint intake, investigation, written findings, and escalation options.</p>
+        <div class="io-label output">DiSan Output</div>
+        <p class="io-text">The policy preserves the process: informal intake, impartial ombudsman review, documented recommendations, implementation tracking, and escalation to mediation, arbitration, or legal action when needed.</p>
       </div>
     </div>
     <p style="margin-top: 24px; text-align: center; color: var(--text-muted);">
