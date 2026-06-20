@@ -216,11 +216,6 @@
       padding: 0 3px;
       border-radius: 4px;
     }
-    .io-title {
-      margin: 36px 0 18px;
-      font-size: 1.05rem;
-      color: var(--text);
-    }
     .io-grid {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
     }
@@ -457,30 +452,6 @@ Financial transactions involve [NAME]'s account pin ([ACCOUNT_PIN]) and phone nu
       </div>
     </div>
 
-    <h3 class="io-title">Input / Output 样例</h3>
-    <div class="io-grid">
-      <div class="io-card">
-        <h3>Operational Risk</h3>
-        <div class="io-label">Input</div>
-        <p class="io-text">A risk report mentions a single data center at <strong>73 rue David Menard</strong> and customer credentials tied to <strong>Vicenta D. Martin</strong>.</p>
-        <div class="io-label output">DiSan Output</div>
-        <p class="io-text">The report flags single-site continuity exposure and credential-driven fraud risk, recommending disaster recovery, redundant access paths, MFA, patching, and staff security training.</p>
-      </div>
-      <div class="io-card">
-        <h3>Supply Resilience</h3>
-        <div class="io-label">Input</div>
-        <p class="io-text">A supply agreement names <strong>Mark Nichols-Blackwell</strong> while requiring 99.5% availability, five-business-day lead time, two sources per critical component, and a written contingency plan.</p>
-        <div class="io-label output">DiSan Output</div>
-        <p class="io-text">The supplier record defines resilience controls: high availability, bounded lead time, diversified sourcing for critical components, and disruption notification and contingency procedures.</p>
-      </div>
-      <div class="io-card">
-        <h3>Dispute Resolution</h3>
-        <div class="io-label">Input</div>
-        <p class="io-text">A dispute policy includes an organization name, mailing address, and ombudsman email while describing complaint intake, investigation, written findings, and escalation options.</p>
-        <div class="io-label output">DiSan Output</div>
-        <p class="io-text">The policy preserves the process: informal intake, impartial ombudsman review, documented recommendations, implementation tracking, and escalation to mediation, arbitration, or legal action when needed.</p>
-      </div>
-    </div>
     <p style="margin-top: 24px; text-align: center; color: var(--text-muted);">
       完整叙事、复现命令和多方 RAG 示例见
       <a style="color: var(--accent);" href="https://github.com/RezinChow/DiSan/blob/main/docs/running_examples.md" target="_blank" rel="noopener noreferrer">docs/running_examples.md</a>。
@@ -729,6 +700,39 @@ Financial transactions involve [NAME]'s account pin ([ACCOUNT_PIN]) and phone nu
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</section>
+
+<!-- Input / Output Examples -->
+<section id="io-examples">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Input / Output 样例</h2>
+      <p>实验结果之后，再看 3 个更贴近数据记录的输入输出片段：保留业务语义，去掉显式 PII 与可归因的来源表达。</p>
+    </div>
+    <div class="io-grid">
+      <div class="io-card">
+        <h3>Operational Risk</h3>
+        <div class="io-label">Input</div>
+        <p class="io-text">A risk report mentions a single data center at <strong>73 rue David Menard</strong> and customer credentials tied to <strong>Vicenta D. Martin</strong>.</p>
+        <div class="io-label output">DiSan Output</div>
+        <p class="io-text">The report flags single-site continuity exposure and credential-driven fraud risk, recommending disaster recovery, redundant access paths, MFA, patching, and staff security training.</p>
+      </div>
+      <div class="io-card">
+        <h3>Supply Resilience</h3>
+        <div class="io-label">Input</div>
+        <p class="io-text">A supply agreement names <strong>Mark Nichols-Blackwell</strong> while requiring 99.5% availability, five-business-day lead time, two sources per critical component, and a written contingency plan.</p>
+        <div class="io-label output">DiSan Output</div>
+        <p class="io-text">The supplier record defines resilience controls: high availability, bounded lead time, diversified sourcing for critical components, and disruption notification and contingency procedures.</p>
+      </div>
+      <div class="io-card">
+        <h3>Dispute Resolution</h3>
+        <div class="io-label">Input</div>
+        <p class="io-text">A dispute policy includes an organization name, mailing address, and ombudsman email while describing complaint intake, investigation, written findings, and escalation options.</p>
+        <div class="io-label output">DiSan Output</div>
+        <p class="io-text">The policy preserves the process: informal intake, impartial ombudsman review, documented recommendations, implementation tracking, and escalation to mediation, arbitration, or legal action when needed.</p>
+      </div>
     </div>
   </div>
 </section>
