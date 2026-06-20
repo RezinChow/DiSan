@@ -4,11 +4,14 @@ This repository contains the code needed to reproduce the main DiSan training, r
 
 Project page: https://rezinchow.github.io/DiSan/
 
+Running examples: `docs/running_examples.md`
+
 ## Directory Layout
 
 - `fed_lightweight/`: lightweight federated DiSan training code.
 - `attack_light/`: privacy and attribution experiments.
 - `rag_dataset_pipeline/`: RAG dataset construction plus hybrid retrieval.
+- `docs/`: narrative examples and reproduction notes.
 - `data/`: small example or placeholder data layout. Replace with the datasets
   used for a specific reproduction run.
 - `long-t5-tglobal-base/`, `bge-m3/`, `bge-reranker-v2-m3/`,

@@ -3,6 +3,9 @@
 This directory provides a pipeline for generating grounded RAG evaluation QA
 pairs from JSONL document records.
 
+For an end-to-end narrative that follows a query from raw evidence through
+sanitization and RAG answering, see `../docs/running_examples.md`.
+
 
 ## Pipeline
 
