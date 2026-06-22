@@ -4,6 +4,8 @@ This repository contains the code needed to reproduce the main DiSan training, r
 
 Project page: https://rezinchow.github.io/DiSan/
 
+Paper: https://arxiv.org/abs/2606.15335
+
 Running examples: `docs/running_examples.md`
 
 ## Directory Layout

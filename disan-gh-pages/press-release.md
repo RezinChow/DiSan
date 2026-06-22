@@ -20,6 +20,7 @@
 | **所属机构** | 上海人工智能实验室（Shanghai AI Lab）、上海交通大学 |
 | **集成产品** | Intern-Shannon 多智能体协作框架内置隐私模块 |
 | **开源地址** | `https://github.com/RezinChow/DiSan` |
+| **论文地址** | `https://arxiv.org/abs/2606.15335` |
 | **项目页面** | `https://rezinchow.github.io/DiSan/` |
 
 ---
