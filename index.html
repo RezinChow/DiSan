@@ -347,10 +347,10 @@
   <div class="nav-inner">
     <div class="logo"><img src="shannon.png" alt="DiSan">书安·涤隐</div>
     <ul class="nav-links">
-      <li><a href="#running-example">示例</a></li>
       <li><a href="#problem">问题</a></li>
       <li><a href="#method">方法</a></li>
       <li><a href="#results">效果</a></li>
+      <li><a href="#running-example">示例</a></li>
       <li><a href="#integration">集成</a></li>
     </ul>
     <a class="nav-cta" href="https://github.com/RezinChow/DiSan" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -419,45 +419,6 @@
     <div class="stat-label">神经网络探测归因降低</div>
   </div>
 </div>
-
-<!-- Running Example -->
-<section id="running-example" class="method-bg">
-  <div class="section-inner">
-    <div class="section-header">
-      <h2>Running Example</h2>
-      <p>从一段含 PII 的金融风险证据出发，看 DiSan 如何保留可回答问题的 Role 信息，同时压低显式标识符和隐式文风指纹。</p>
-    </div>
-    <div class="example-grid">
-      <div class="example-card">
-        <h3>1. 原始证据</h3>
-        <p>样例来自仓库中的 CorporateBank 风险评估记录。它有业务价值，但也暴露地址、姓名、账号口令和电话。</p>
-        <code>The company depends on a single data center located at <mark>73 rue David Menard, BoucherBourg</mark>, creating business-continuity risk.
-Financial transactions involve <mark>Vicenta D. Martin</mark>'s account pin (<mark>059332</mark>) and phone number (<mark>3505216216</mark>).</code>
-      </div>
-      <div class="example-card">
-        <h3>2. 标识符掩码</h3>
-        <p>Placeholder 可以遮住明显实体，但仍保留原来的报告模板、句式和组织文风，攻击者仍可能做归因。</p>
-        <code>The company depends on a single data center located at [STREET_ADDRESS], creating business-continuity risk.
-Financial transactions involve [NAME]'s account pin ([ACCOUNT_PIN]) and phone number ([PHONE_NUMBER]).</code>
-      </div>
-      <div class="example-card">
-        <h3>3. DiSan 风格输出</h3>
-        <p>目标输出保留任务语义：单点数据中心、业务连续性、凭证暴露、欺诈风险和控制建议；同时泛化来源风格。</p>
-        <code>The operational-risk report flags single-site data-center dependence and customer-credential exposure. Recommended controls include disaster recovery planning, redundant access paths, multi-factor authentication, regular software updates, and staff security training.</code>
-      </div>
-      <div class="example-card">
-        <h3>4. 下游 RAG 回答</h3>
-        <p>跨 Agent 共享时，答案应该暴露可行动的控制措施，而不是暴露原始实体、内部模板或客户端写作习惯。</p>
-        <code>The alliance should reduce cyber operational risk with MFA, patching, employee training, and disaster recovery; protect continuity with alternative suppliers and notification workflows; and keep response actions auditable through documented records.</code>
-      </div>
-    </div>
-
-    <p style="margin-top: 24px; text-align: center; color: var(--text-muted);">
-      完整叙事、复现命令和多方 RAG 示例见
-      <a style="color: var(--accent);" href="https://github.com/RezinChow/DiSan/blob/main/docs/running_examples.md" target="_blank" rel="noopener noreferrer">docs/running_examples.md</a>。
-    </p>
-  </div>
-</section>
 
 <!-- Problem -->
 <section id="problem">
@@ -701,6 +662,45 @@ Financial transactions involve [NAME]'s account pin ([ACCOUNT_PIN]) and phone nu
         </tbody>
       </table>
     </div>
+  </div>
+</section>
+
+<!-- Running Example -->
+<section id="running-example" class="method-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Running Example</h2>
+      <p>从一段含 PII 的金融风险证据出发，看 DiSan 如何保留可回答问题的 Role 信息，同时压低显式标识符和隐式文风指纹。</p>
+    </div>
+    <div class="example-grid">
+      <div class="example-card">
+        <h3>1. 原始证据</h3>
+        <p>样例来自仓库中的 CorporateBank 风险评估记录。它有业务价值，但也暴露地址、姓名、账号口令和电话。</p>
+        <code>The company depends on a single data center located at <mark>73 rue David Menard, BoucherBourg</mark>, creating business-continuity risk.
+Financial transactions involve <mark>Vicenta D. Martin</mark>'s account pin (<mark>059332</mark>) and phone number (<mark>3505216216</mark>).</code>
+      </div>
+      <div class="example-card">
+        <h3>2. 标识符掩码</h3>
+        <p>Placeholder 可以遮住明显实体，但仍保留原来的报告模板、句式和组织文风，攻击者仍可能做归因。</p>
+        <code>The company depends on a single data center located at [STREET_ADDRESS], creating business-continuity risk.
+Financial transactions involve [NAME]'s account pin ([ACCOUNT_PIN]) and phone number ([PHONE_NUMBER]).</code>
+      </div>
+      <div class="example-card">
+        <h3>3. DiSan 风格输出</h3>
+        <p>目标输出保留任务语义：单点数据中心、业务连续性、凭证暴露、欺诈风险和控制建议；同时泛化来源风格。</p>
+        <code>The operational-risk report flags single-site data-center dependence and customer-credential exposure. Recommended controls include disaster recovery planning, redundant access paths, multi-factor authentication, regular software updates, and staff security training.</code>
+      </div>
+      <div class="example-card">
+        <h3>4. 下游 RAG 回答</h3>
+        <p>跨 Agent 共享时，答案应该暴露可行动的控制措施，而不是暴露原始实体、内部模板或客户端写作习惯。</p>
+        <code>The alliance should reduce cyber operational risk with MFA, patching, employee training, and disaster recovery; protect continuity with alternative suppliers and notification workflows; and keep response actions auditable through documented records.</code>
+      </div>
+    </div>
+
+    <p style="margin-top: 24px; text-align: center; color: var(--text-muted);">
+      完整叙事、复现命令和多方 RAG 示例见
+      <a style="color: var(--accent);" href="https://github.com/RezinChow/DiSan/blob/main/docs/running_examples.md" target="_blank" rel="noopener noreferrer">docs/running_examples.md</a>。
+    </p>
   </div>
 </section>
 
