@@ -175,6 +175,8 @@
     .section-header { text-align: center; margin-bottom: 40px; }
     .section-header h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 16px; }
     .section-header p { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+    .section-header a { color: var(--accent); text-decoration: none; }
+    .section-header a:hover { text-decoration: underline; }
 
     /* Problem */
     .problem-grid {
@@ -770,16 +772,18 @@ Financial transactions involve [NAME]'s account pin ([ACCOUNT_PIN]) and phone nu
   <div class="section-inner">
     <div class="section-header">
       <h2>引用</h2>
-      <p>如果您在研究中使用了 DiSan，请引用以下论文。</p>
+      <p>如果您在研究中使用了 DiSan，请引用 <a href="https://arxiv.org/abs/2606.15335" target="_blank" rel="noopener noreferrer">arXiv:2606.15335</a>。</p>
     </div>
     <div class="cite-box">
       <button onclick="copyCite()">复制</button>
-      <pre id="citation-text">@article{liu2025disan,
+      <pre id="citation-text">@misc{liu2026privacypreservingtextsanitizationdistributed,
   title={Privacy-Preserving Text Sanitization for Distributed Agents Collaboration via Disentangled Representations},
-  author={Liu, Xuan and Zhou, Hefeng and Chen, Sicheng and Yang, Chao and Xu, Xingcheng and Qu, Jingjing and Lou, Jiong and Li, Jie and Hu, Xia},
-  journal={arXiv preprint},
-  year={2025},
-  institution={Shanghai Artificial Intelligence Laboratory}
+  author={Xuan Liu and Hefeng Zhou and Sicheng Chen and Chao Yang and Xingcheng Xu and Jingjing Qu and Jiong Lou and Jie LI and Xia Hu},
+  year={2026},
+  eprint={2606.15335},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2606.15335}
 }</pre>
     </div>
   </div>
@@ -789,6 +793,7 @@ Financial transactions involve [NAME]'s account pin ([ACCOUNT_PIN]) and phone nu
   <p>© 2025 Shanghai Artificial Intelligence Laboratory. Released for research use.</p>
   <p style="margin-top:8px">
     <a href="https://github.com/RezinChow/DiSan" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+    <a href="https://arxiv.org/abs/2606.15335" target="_blank" rel="noopener noreferrer">arXiv</a> ·
     <a href="#citation">Citation</a> ·
     <a href="https://intern-shannon.org" target="_blank" rel="noopener noreferrer">Intern-Shannon</a>
   </p>
